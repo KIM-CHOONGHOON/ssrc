@@ -1,0 +1,464 @@
+@charset "utf-8";
+
+
+/* CSS Document */
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,form,fieldset,button{margin:0;padding:0;}
+body,input,select,textarea{color:#9d9997;font-family:"돋움", Dotum, "굴림", Gulim;font-size:13px;font-weight:normal;}
+table { font:12px Gulim, Dotum }
+td { line-height:18px; color:#555555; }
+td a { text-decoration:none; color:#555; }
+td a:hover, td a:focus{ color:#F00; }
+
+body{ text-align:center;}
+hr{display:none;}
+img,fieldset{border:0;}
+input,select,textarea{vertical-align:middle; color:#333;}
+.border01 { border:1px solid #CCD5E4; height:15px;}
+.border02 { border:1px solid #CCD5E4; height:40px;}
+ul,ol,li{list-style:none;}
+caption,legend { display:none; }
+
+/* Font */
+.txtBlack { font:12px Gulim, Dotum; color:#000 }
+.txtBlackBold { font:bold 12px Gulim, Dotum; color:#000 }
+.txtGley { font:12px Gulim, Dotum; color:#666 }
+.txtGleyLeft10 { font:12px Gulim, Dotum; color:#666; padding-left:10px; }
+.txtGleyBold { font:bold 12px Gulim, Dotum; color:#666 }
+.txtBlue { font:12px Gulim, Dotum; color:#5170a6 }
+.txtBlueBold { font:bold 12px Gulim, Dotum; color:#5170a6 }
+.txtMediumblue { color:#0000CD }
+.txtOrange { color:#F60 }
+
+.txt_board { font-weight:bold; color:#9D9997; }
+
+
+.txtBlackBold a { color:#5170a6; text-decoration:none; }
+.txtBlackBold a:hover, .txtBlackBold a:focus { color:#fc6314; text-decoration:underline; }
+
+/* padding */
+.pad3 { padding:3px; }
+.padtable { padding:3px 5px 3px 5px; }
+.pad5 { padding:5px; }
+.pad5L { text-align:left; padding-left:5px; }
+.pad8L { padding-left:8px; }
+.pad55L { padding-left:55px; }
+.pad8T { padding-top:8px; }
+.pad20T { padding-top:20px; }
+.pad20B { padding-bottom:20px; }
+.pad8B { padding-bottom:8px; }
+.pad15T { padding-top:15px; }
+.txtCenter { text-align:center; }
+.txtLeft { text-align:left; }
+.txtRight { text-align:right; }
+.input_t { border:2px solid #CCC; height:18px }
+
+.colGreen { color:#72ac27; }
+.colDeepblue { color:#4f5476; }
+
+/* table 관련 */
+.T2bline { border-top:2px solid #5170a6}
+.Rline { border-right:1px solid #E3E3E3; }
+.Lline { border-left:1px solid #E3E3E3; }
+.Tline { border-top:1px solid #E3E3E3; }
+.Bline { border-bottom:1px solid #E3E3E3; }
+
+
+/* backgroud */
+.Dcolor { background-color:#F5F5F5; }
+
+
+/*table 기본*/
+#table { border-top:2px solid #5170a6; border-left:1px solid #E3E3E3;  }
+#table th { background-color:#F5F5F5; font-weight:bold; text-align:center; height:31px; border-bottom:1px solid #E3E3E3; border-right:1px solid #E3E3E3; border-bottom:1px solid #E3E3E3; border-left:1px solid #E3E3E3;}
+#table td { height:30px; border-right:1px solid #E3E3E3; border-bottom:1px solid #E3E3E3 }
+#table th.ctag a { font:bold 12px Gulim, Dotum; color:#5170a6; }
+#table th.ctag a:hover, #table td.ctag a:focus { font:bold 12px Gulim, Dotum; color:#F60; text-decoration:underline; }
+#table td.ctag a { font:bold 12px Gulim, Dotum; color:#5170a6; }
+#table td.ctag a:hover, #table td.ctag a:focus { font:bold 12px Gulim, Dotum; color:#F60; text-decoration:underline; }
+
+#table tr td.tnoline table tr td { border:none; }
+
+
+/* layout */
+#wrapper{ width:100%; height:100%; position:relative; }
+#rev { position:absolute; left:0px; top:0px; width:100%; z-index:100; text-align:center; display:none}
+#rev_flash { position:relative;z-index:300; padding-top:180px}
+#revbg { position:absolute; top:0px; left:0px; background-color:#000; filter:alpha(opacity=40); -moz-opacity:0.4;-khtml-opacity:0.4; opacity:0.4; width:100%; height:2000px; display:none;  }
+/* logo */
+#logo {z-index:30; width:310px; height:83px; float:left; }
+#logo_sub { width:203px; height:96px; float:right; }
+
+ul.globalTop { list-style:none; text-align:center; margin-top:40px; margin-left:30px;  } 
+ul.globalTop li { list-style:none; float:left;} 
+
+h1.logo { padding-top:10px; padding-left:10px }
+h1.logo a {
+			background:url/images/main/2011/images/comm/top/logo.gif) no-repeat 0 0;
+			display:block;
+			width:205px; height:61px;
+			text-indent:-905px;
+			overflow:hidden;
+}
+
+#logoFooter {
+	width:210px;
+	height:60px;
+	margin-top:40px;
+	float:left;
+}
+
+
+#topSearch ul li { padding:0px; margin:0px; height:21px; }
+#topSearch ul li.sel { width:260px; padding:0px; margin:0px; border:2px solid #4a94d4 }
+#topSearch ul li.sel select { padding-top:1px; height:21px; color:#000;margin:0 }
+#topSearch ul li input.box { width:194px; padding-left:2px; padding-top:2px; margin:0; border:1px solid #FFF; line-height:18px; font:12px Dotum, Gulim; color:#666  }
+#topSearch ul li input.box.focus{background:#fff !important;}
+#topSearch ul li input.box.focusnot{background:#fff !important;}
+#topSearch ul li.btn { width:42px; height:25px; padding-left:2px; margin:0 }
+#set_sugicn{
+	position:absolute;
+	left:388px;
+	top:6px; 
+}
+
+/* 검색 키워드 입력 박스 화살표 이미지 스타일 */
+#set_sugicnUP{
+	position:absolute;
+	left:388px;
+	top:6px;
+}
+
+#SchSug{ 	
+	position:absolute;
+	top:25px;
+	left:143px;
+	z-index:100;
+}
+
+#hFrame{
+	display:none;
+	width:265px;
+	z-index:100;
+}
+
+#topSearch #wnquery { background:#fff url(/images/main/2011/images/comm/top/searchtxt.gif) no-repeat 0px 1px; }
+
+#logo_auth { position:absolute; background-color:#FFF; display:none; width:390px; height:65px; right:4px; top:8px; z-index:300; border:3px solid #E4E4E4 }
+		#alogform { display:block; width:360px; height:25px; padding-left:13px; padding-top:10px }
+		#alogform form { border:none; }
+		#alogform form dl dt, #logform form dl dd { vertical-align:top; }
+		#alogform #uid { background:#fff url/images/main/2011/images/comm/login/mid.gif) no-repeat 0px 1px; }
+		#alogform #upw { background:#fff url/images/main/2011/images/comm/login/mpass.gif) no-repeat 0px 1px; }
+		#alogform dl dt { float:left; padding:0px }
+		#alogform dl dt label { display:none; }
+		#alogform dl dd { float:left; padding-right:2px }
+		#alogform dl dd.pad1 { padding-left:1px; }
+		#alogform .input_textb { width:137px; height:19px; line-height:18px; border:2px solid #4a94d4; }
+		#alogform .input_text { width:137px; height:19px; line-height:18px; border:2px solid #b6b6b6; }
+		#alogform .input_text.focus{border:2px solid #4a94d4; background:#fff !important;}
+		#alogform .input_text.focusnot{background:#fff !important;}
+		#alogbtn { display:block; width:190px; height:25px; padding:0px 0px 0px 10px }
+		#alogbtn ul li { float:left; }
+
+#logo_auth span { width:18px; height:18px; display:block; position:absolute; top:13px; right:8px; }
+
+
+
+/* cmenu */
+#cmenu { width:100%; height:52px; background:url/images/main/2011/images/comm/cmenu/bg.gif) repeat-x; display:block; position:relative; clear:both; z-index:29}
+	/*
+		레이어 위에 레이어를 덮을때는 꼭~!!! 포지션을 고려하자 
+	*/
+	#top { position:relative; margin:0 auto; width:905px }
+	#topmenu { width:905px; position:absolute; display:block; }
+	#topmenu img { vertical-align:middle; }
+		#topmenu li { float:left; height:41px; }
+			#topmenu li.menu1 { width:160px; }
+			#topmenu li.menu2,#topmenu li.menu3 { width:128px; }
+			#topmenu li.menu4 { width:146px; }
+			#topmenu li.menu5 { width:120px; }
+			#topmenu li.menu6 { width:222px; }
+			#topmenu li ul { display:none; background-color:#4a94d4;border-bottom:3px solid #20509a;padding:0 5px 5px 5px; }
+				#topmenu li ul li { float:none; height:18px; padding-left:8px;  padding-top:8px; border-bottom:1px solid #77aede}
+				#topmenu li ul li.nbline { border-bottom:none}
+					#topmenu li ul li a { font:bold 12px Gulim, Dotum; text-decoration:none; color:#FFF; } 
+					#topmenu li ul li a:hover, #topmenu li ul li a:hover { font:bold 12px Gulim, Dotum; text-decoration:none; color:#fffa71; }
+
+
+
+
+/* btn */
+ #btn { width:100%; display:block;  position:relative; height:42px; background-color:#F6F6F6; border-bottom:2px solid #4a94d4; border-top:1px solid #C5C5C5; } 
+
+	#btn { margin:0 auto; display:block; width:905px; height:42px;  }
+	#btn ul li { float:left; padding-top:13px }
+	#btn ul li.btn01 { width:151px; text-align:center; }
+	#btn ul li.btn02 { width:138px; text-align:center; }
+	#btn ul li.btn03 { width:113px; text-align:center; }
+	#btn ul li.btn04 { width:124px; text-align:center; }
+	#btn ul li.btn05 { width:112px; text-align:center; }
+	#btn ul li.btn06 { width:121px; text-align:center; }
+	#btn ul li.btn07 { width:139px; text-align:center; }
+	#btn ul li.btn08 { width:102px; text-align:center; }
+	#btn ul li a {color:#808080; font:bold 12px Gulim, Dotum; text-decoration:none;  }
+	#btn ul li a:hover, #btn ul li a:focus { color:#4a94d4; text-decoration:underline; }
+	
+	
+/* tomenu */
+#tomenuArea { width:100%; display:block; height:96px; position:relative; }
+	#tomenuArea { margin:0 auto; display:block; width:905px; height:95px; }
+	#tomenuArea ul li.imgpart { text-align:center; vertical-align:top }
+	#tomenuArea ul li div { float:left; padding-top:18px }
+	#tomenuArea ul li div.tmenu1 { width:110px; padding-left:40px }
+	#tomenuArea ul li div.tmenu2 { width:110px; padding-left:95px}
+	#tomenuArea ul li div.tmenu3 { width:120px; padding-left:95px}
+	#tomenuArea ul li div.tmenu4 { width:110px; padding-left:95px}
+	#tomenuArea ul li div.tmenu5 { width:110px; padding-left:95px}
+	#tomenuArea ul li div ul { padding-top:10px; }
+	#tomenuArea ul li div ul li { height:25px; line-height:18px; background:url/images/main/2011/images/comm/tomenu/dot.gif) 0 8px no-repeat; padding-left:7px; }
+	#tomenuArea ul li div ul li a { color:#808080; text-decoration:none; font:bold 12px  Gulim, Dotum }
+	#tomenuArea ul li div ul li a:hover, #tomenu ul li ul li a:focus { color:#4a94d4; text-decoration:underline; }
+	
+/* remenu */
+.tbRightMidT {
+	background:url(/01_img/main/tbRightSm_T.gif) no-repeat top;
+	height:34px;
+	font-size:0px;
+}
+.tbRightMidM {
+	background:url(/01_img/main/tbRightSm_M.gif) no-repeat bottom;
+	text-align:center;
+	padding-top:5px;
+}
+
+
+.tbRightMidMbg {
+	background:url(/01_img/main/tbRightSm_Mbg.gif) repeat-y;
+	text-align:center;
+}
+
+.tbRightMidB {
+	background:url(/01_img/main/tbRightSm_B.gif) no-repeat top;
+	height:5px;
+	font-size:0px;
+}
+
+table.tbConDashed{
+	margin:0 0 5px 0;
+	text-align:left;	
+}
+table.tbConDashed td{
+	border-bottom:1px dashed #CCC;
+	height:23px;
+	line-height:23px;
+	text-align:left;
+}
+
+ 
+/* #bottom { width:100%; display:block; position:relative; } */
+.footer {
+	background:#fff;
+	color:#545454;
+	border-top:2px solid #c0c0c0;
+	text-align:center;
+	padding-top:24px;
+	padding-bottom:20px;
+}
+	
+/* #famenu { width:100%; display:block; position:relative; border-top:1px solid #C5C5C5 } */
+.tbWidthMidT {
+	background:url(/01_img/main/tbMidwidth_T.gif) no-repeat top;
+	height:7px;
+	font-size:0px;
+}
+.tbWidthMidM {
+	background:url(/01_img/main/tbMidwidth_M.gif) repeat-y top;
+	text-align:center;
+}
+.tbWidthMidB {
+	background:url(/01_img/main/tbMidwidth_B.gif) no-repeat top;
+	height:7px;
+	font-size:0px;
+}
+
+.txtLightGray {
+	color:#a6a6a6;
+	font-size:11px;
+}
+
+ul.MenuBarHorizontal
+{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	cursor: default;
+	width: auto;
+}
+/* Set the active Menu Bar with this class, currently setting z-index to accomodate IE rendering bug: http://therealcrisp.xs4all.nl/meuk/IE-zindexbug.html */
+ul.MenuBarActive
+{
+	z-index: 1000;
+}
+/* Menu item containers, position children relative to this container and are a fixed width */
+ul.MenuBarHorizontal li
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 100%;
+	position: relative;
+	text-align: left;
+	cursor: pointer;
+	float: left;
+}
+/* Submenus should appear below their parent (top: 0) with a higher z-index, but they are initially off the left side of the screen (-1000em) */
+ul.MenuBarHorizontal ul
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 100%;
+	z-index: 1020;
+	cursor: default;
+	position: absolute;
+	left: -1000em;
+	background:#10004d;
+	width:138px;
+	border:1px solid #7e7e7e;
+}
+/* Submenu that is showing with class designation MenuBarSubmenuVisible, we set left to auto so it comes onto the screen below its parent menu item */
+ul.MenuBarHorizontal ul.MenuBarSubmenuVisible
+{
+	left: auto;
+	width:128px;
+}
+/* Menu item containers are same fixed width as parent */
+ul.MenuBarHorizontal ul li
+{
+	width: 118px;
+	height:20px;
+	margin:8px 0px 0px 10px;
+	background:#10004d;
+	border-bottom:1px solid #03F;
+	color:#d5d4d4;
+	font-weight:bolder;
+}
+
+ul.MenuBarHorizontal ul li.finishBox
+{
+	width: 128px;
+	height:20px;
+	padding-top:8px;
+	background: #10004d;
+	font-weight:bolder;
+}
+
+/* Submenus should appear slightly overlapping to the right (95%) and up (-5%) */
+ul.MenuBarHorizontal ul ul
+{
+	position: absolute;
+	margin: -5% 0 0 95%;
+}
+/* Submenu that is showing with class designation MenuBarSubmenuVisible, we set left to 0 so it comes onto the screen */
+ul.MenuBarHorizontal ul.MenuBarSubmenuVisible ul.MenuBarSubmenuVisible
+{
+	left: auto;
+	top: 0;
+}
+
+/*******************************************************************************
+
+ DESIGN INFORMATION: describes color scheme, borders, fonts
+
+ *******************************************************************************/
+
+/* Menu items are a light gray block with padding and no text decoration */
+ul.MenuBarHorizontal a
+{
+	display: block;
+	cursor: pointer;
+	padding: 0px;
+	color: #d5d4d4;
+	width:120px;
+	font-weight:bolder;
+	font-size:13px;
+	text-decoration: none;
+	text-align:left;
+}
+
+/* Menu items that have mouse over or focus have a blue background and white text */
+ul.MenuBarHorizontal a:hover, ul.MenuBarHorizontal a:focus
+{
+	color:#F60;
+	font-weight:bolder;
+	font-size:13px;
+}
+/* Menu items that are open with submenus are set to MenuBarItemHover with a blue background and white text */
+ul.MenuBarHorizontal a.MenuBarItemHover, ul.MenuBarHorizontal a.MenuBarItemSubmenuHover, ul.MenuBarHorizontal a.MenuBarSubmenuVisible
+{
+	color: #F60;
+	font-weight:bolder;
+	font-size:13px;
+}
+
+/*******************************************************************************
+
+ SUBMENU INDICATION: styles if there is a submenu under a given menu item
+
+ *******************************************************************************/
+
+/* Menu items that have a submenu have the class designation MenuBarItemSubmenu and are set to use a background image positioned on the far left (95%) and centered vertically (50%) */
+ul.MenuBarHorizontal a.MenuBarItemSubmenu
+{
+	text-align:center;
+	font-weight:bold;
+	font-family:Verdana, Geneva, sans-serif;
+	height:41px;
+}
+/* Menu items that have a submenu have the class designation MenuBarItemSubmenu and are set to use a background image positioned on the far left (95%) and centered vertically (50%) */
+ul.MenuBarHorizontal ul a.MenuBarItemSubmenu
+{
+	text-align:center;
+	font-weight:bold;
+	font-family:Verdana, Geneva, sans-serif;
+	height:26px;
+}
+/* Menu items that are open with submenus have the class designation MenuBarItemSubmenuHover and are set to use a "hover" background image positioned on the far left (95%) and centered vertically (50%) */
+ul.MenuBarHorizontal a.MenuBarItemSubmenuHover
+{
+	text-align:center;
+	font-weight:bold;
+	font-family:Verdana, Geneva, sans-serif;
+	height:45px;
+}
+/* Menu items that are open with submenus have the class designation MenuBarItemSubmenuHover and are set to use a "hover" background image positioned on the far left (95%) and centered vertically (50%) */
+ul.MenuBarHorizontal ul a.MenuBarItemSubmenuHover
+{
+	text-align:center;
+	font-weight:bold;
+	font-family:Verdana, Geneva, sans-serif;
+	height:26px;
+}
+
+/*******************************************************************************
+
+ BROWSER HACKS: the hacks below should not be changed unless you are an expert
+
+ *******************************************************************************/
+
+/* HACK FOR IE: to make sure the sub menus show above form controls, we underlay each submenu with an iframe */
+ul.MenuBarHorizontal iframe
+{
+	position: absolute;
+	z-index: 1010;
+	filter:alpha(opacity:0.1);
+}
+/* HACK FOR IE: to stabilize appearance of menu items; the slash in float is to keep IE 5.0 from parsing */
+@media screen, projection
+{
+	ul.MenuBarHorizontal li.MenuBarItemIE
+	{
+		display: inline;
+		f\loat: left;
+	}
+}

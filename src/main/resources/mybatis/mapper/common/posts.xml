@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.ssrc.mapper.BoardMapper">
+    <select id="getTime" resultType="java.time.LocalDateTime">
+        SELECT now()
+    </select>
+
+    <select id="listPosts" parameterType="com.example.ssrc.domain.Post" resultType="com.example.ssrc.domain.Post">
+        select grp_code, cust_id, post_seri_no, put_prog_stat_code, secr_numb,
+               cust_name,put_titl_cont,ques_deta_cont,file_text_kind_code,file_name,
+               file_stor_loca_cont, firs_crea_date_time, firs_crea_empl, last_edit_date_time, last_edit_empl
+          from post_writ_main
+         <where>
+
+         </where>
+    </select>
+
+    <select id="getPost" parameterType="com.example.ssrc.domain.Post" resultType="com.example.ssrc.domain.Post">
+        select grp_code, cust_id, post_seri_no, put_prog_stat_code, secr_numb,
+               cust_name,put_titl_cont,ques_deta_cont,file_text_kind_code,file_name,
+               file_stor_loca_cont, firs_crea_date_time, firs_crea_empl, last_edit_date_time, last_edit_empl
+          from post_writ_main
+         where post_seri_no = #{PostSeriNo}
+    </select>
+
+    <insert id="createPost" parameterType="com.example.ssrc.domain.Post">
+        insert into post_writ_main (grp_code, cust_id, post_seri_no, put_prog_stat_code, secr_numb, cust_name,
+                                    put_titl_cont, ques_deta_cont, file_text_kind_code, file_name, file_stor_loca_cont,
+                                    firs_crea_empl, last_edit_date_time, last_edit_empl)
+        values (#{GrpCode}, #{CustId}, #{PostSeriNo}, #{PutProgStatCode}, #{SecrNumb}, #{CustName},
+                #{PutTitlCont}, #{QuesDetaCont}, #{FileTextKindCode}, #{FileName}, #{FileStorLocaCont},
+                #{FirsCreaEmpl}, #{LastEditDateTime}, #{LastEditEmpl})
+    </insert>
+
+    <update id="updatePost" parameterType="com.example.ssrc.domain.Post">
+        update post_writ_main
+           <set>
+               <if test="GrpCode != null">grp_code = #{GrpCode},</if>
+               <if test="CustId != null">cust_id = #{CustId},</if>
+               <if test="PutProgStatCode != null">put_prog_stat_code = #{PutProgStatCode},</if>
+               <if test="SecrNumb != null">secr_numb = #{SecrNumb},</if>
+               <if test="CustName != null">cust_name = #{CustName},</if>
+               <if test="PutTitlCont != null">put_titl_cont = #{PutTitlCont},</if>
+               <if test="QuesDetaCont != null">ques_deta_cont = #{QuesDetaCont},</if>
+               <if test="FileTextKindCode != null">file_text_kind_code = #{FileTextKindCode},</if>
+               <if test="FileName != null">file_name = #{FileName},</if>
+               <if test="FileStorLocaCont != null">file_stor_loca_cont = #{FileStorLocaCont},</if>
+               <if test="LastEditDateTime != null">last_edit_date_time = #{LastEditDateTime},</if>
+               <if test="LastEditEmpl != null">last_edit_empl = #{LastEditEmpl},</if>
+           </set>
+         where post_seri_no = #{PostSeriNo}
+    </update>
+
+    <delete id="deletePost">
+        delete from post_writ_main where post_seri_no = #{PostSeriNo}
+    </delete>
+</mapper>
+
+
+

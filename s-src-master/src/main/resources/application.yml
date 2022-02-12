@@ -1,0 +1,33 @@
+logging:
+  config: classpath:log4j2.xml
+
+spring:
+  web:
+    resources:
+      static-locations: file:src/main/resources/static/,classpath:/static/
+  devtools:
+    restart:
+      enabled: false
+    livereload:
+      enabled: true
+  thymeleaf:
+    prefix : classpath:templates/
+    suffix : .html
+    cache : false
+  datasource:
+    url: jdbc:mariadb://52.78.8.92:3306/ssrc?useUnicode=yes&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Seoul
+    username: root
+    password: ssrc
+    driver-class-name: org.mariadb.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+mybatis:
+  type-aliases-package: com.example.ssrc
+  mapper-locations: mybatis/mapper/**/*.xml
+
+custom:
+  path:
+    upload-images: /opt/code/projects/s-src/file/upload/
